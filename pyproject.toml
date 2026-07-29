@@ -53,6 +53,9 @@ select = ["E", "F", "I", "UP", "B", "SIM", "C4", "PIE", "RUF", "PT"]
 [tool.ruff.lint.per-file-ignores]
 "tests/**" = ["S101"]
 
+[tool.ruff.lint.isort]
+known-first-party = ["support_log_analyzer"]
+
 [tool.ruff.format]
 quote-style = "double"
 line-ending = "lf"
@@ -74,4 +77,3 @@ source = ["support_log_analyzer"]
 [tool.coverage.report]
 fail_under = 85
 show_missing = true
-
