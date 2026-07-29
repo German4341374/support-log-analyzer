@@ -1,0 +1,77 @@
+[build-system]
+requires = ["hatchling==1.28.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "support-log-analyzer"
+version = "0.1.0"
+description = "A privacy-aware CLI for finding recurring failures in application logs."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [{ name = "German4341374" }]
+keywords = ["logs", "support", "cli", "incident-response"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: System :: Logging",
+]
+dependencies = [
+  "pydantic==2.13.4",
+  "rich==15.0.0",
+  "typer==0.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "mypy==2.3.0",
+  "pre-commit==4.5.1",
+  "pytest==9.1.1",
+  "pytest-cov==7.0.0",
+  "ruff==0.16.0",
+]
+
+[project.scripts]
+support-log-analyzer = "support_log_analyzer.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/support_log_analyzer"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "C4", "PIE", "RUF", "PT"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101"]
+
+[tool.ruff.format]
+quote-style = "double"
+line-ending = "lf"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+files = ["src"]
+plugins = ["pydantic.mypy"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-config --strict-markers"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+branch = true
+source = ["support_log_analyzer"]
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true
+
