@@ -1,0 +1,6 @@
+2026-07-29T09:00:00Z ERROR [api] Connection refused by upstream 192.0.2.10 for request 1001
+2026-07-29T09:05:00Z INFO [api] Request completed successfully
+2026-07-29 10:00:00+00:00 [WARNING] worker - Retrying downstream request after timeout
+CRITICAL | Out of memory while processing job 1002
+An unstructured diagnostic line
+

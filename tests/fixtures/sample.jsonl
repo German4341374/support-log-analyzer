@@ -1,0 +1,6 @@
+{"timestamp":"2026-07-29T09:00:00Z","level":"ERROR","service":"api","message":"Database error for ticket 2001"}
+{"time":"2026-07-29T09:30:00Z","severity":"warn","component":"worker","msg":"Retry timed out for job 2002"}
+{"@timestamp":"2026-07-29T10:00:00Z","level":"CRITICAL","app":"gateway","event":"DNS failure at 198.51.100.20"}
+{"timestamp":
+["not","an","object"]
+

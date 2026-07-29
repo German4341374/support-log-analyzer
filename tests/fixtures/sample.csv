@@ -1,0 +1,6 @@
+timestamp,level,service,message
+2026-07-29T09:00:00Z,ERROR,api,Authentication failed for engineer@example.test
+2026-07-29T10:00:00Z,INFO,worker,Job completed
+2026-07-29T11:00:00Z,CRITICAL,database,Access denied for job 3001
+2026-07-29T12:00:00Z,ERROR,api,
+
