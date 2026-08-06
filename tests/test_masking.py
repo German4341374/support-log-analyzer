@@ -10,7 +10,7 @@ from support_log_analyzer.masking import mask_sensitive_data
         ("Request from 192.0.2.42", "<IPV4>"),
         ("Authorization: Bearer demo-token-value-0001", "<BEARER_TOKEN>"),
         ("api_key=demo_api_key_0001", "<API_KEY>"),
-        ("token sk_test_abcdefgh12345678", "<API_KEY>"),
+        ("token sk_test_abcdefgh12345678", "<API_KEY>"),  # gitleaks:allow -- masking fixture
         ("Call +1 (202) 555-0104", "<PHONE>"),
     ],
 )
