@@ -210,7 +210,7 @@ rules.
 - Very large files are currently accumulated in memory before analysis.
 - IPv6 and custom secret formats are not masked in version 0.1.0.
 
-## Future Improvements
+## Possible next steps
 
 - Streaming aggregation for multi-gigabyte files.
 - Multiline stack-trace and syslog/RFC 5424 parsing.
@@ -222,4 +222,3 @@ rules.
 ## License
 
 Licensed under the [MIT License](LICENSE).
-
