@@ -4,10 +4,11 @@
 [![Python 3.12+](https://img.shields.io/badge/Python-3.12%2B-3776AB.svg)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-Support Log Analyzer is a local, privacy-aware CLI that turns mixed application logs into a
-short operational report. It helps support engineers find recurring failures, noisy services,
-failure-heavy time windows, and known problem signatures without uploading logs to an external
-service.
+Point this CLI at a log file to see which errors keep coming back, which services produce
+the most errors, and when things got noisy. It reads text, JSON Lines, and CSV files.
+
+You can filter the results and export a short report. Common sensitive values are masked,
+and the logs aren't uploaded anywhere.
 
 ## Problem
 
